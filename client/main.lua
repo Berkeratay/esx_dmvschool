@@ -72,6 +72,8 @@ function StartDriveTest(type)
 
 		local playerPed   = PlayerPedId()
 		TaskWarpPedIntoVehicle(playerPed, vehicle, -1)
+  		Citizen.Wait(1)
+		exports["LegacyFuel"]:SetFuel(vehicle, 100)
 	end)
 
 	TriggerServerEvent('esx_dmvschool:pay', Config.Prices[type])
